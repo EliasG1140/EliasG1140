@@ -32,10 +32,6 @@ Here are some ideas to get you started:
 [![HTML5](https://img.shields.io/badge/html5-black?style=for-the-badge&logo=html5)](https://github.com/EliasG1140)
 [![CSS3](https://img.shields.io/badge/css3-black?style=for-the-badge&logo=css3)](https://github.com/EliasG1140)
 [![NODE](https://img.shields.io/badge/node.js-black?style=for-the-badge&logo=node.js)](https://github.com/EliasG1140)
-
-  <a href="https://github.com/EliasG1140">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EliasG1140&langs_count=10&exclude_repo=&hide=jupyter%20notebook,vim%20script,cmake,makefile,batchfile,emacs%20lisp,css,html&layout=default&card_width=699&hide_border=true&theme=transparent" />
-  </a>
   
   <p align="center">
   <a href="https://github.com/EliasG1140">
