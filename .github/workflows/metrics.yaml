@@ -1,0 +1,55 @@
+name: Metrics
+on:
+
+  schedule: 
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+
+jobs:
+
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+
+      - name: 👤 General
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/general.svg
+          config_display: large
+          token: ${{ secrets.METRICS_TOKEN }}
+
+      - name: 🧱 Isometric Calendar 
+        uses: lowlighter/metrics@latest
+        with:
+          base: ""
+          filename: metrics/isocalendar.svg
+          config_display: regular
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          token: ${{ secrets.METRICS_TOKEN }}
+      
+      - name: 📚 Topics
+        uses: lowlighter/metrics@latest
+        with:
+          base: ""
+          filename: metrics/topics.svg
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
+          token: ${{ secrets.METRICS_TOKEN }}
+      
+      - name: 📙 Languages
+        uses: lowlighter/metrics@latest
+        with:
+          base: ""
+          filename: metrics/languages.svg
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          plugin_languages_sections: most-used
+          plugin_languages_recent_load: 400
+          plugin_languages_recent_days: 14
+          token: ${{ secrets.METRICS_TOKEN }}
